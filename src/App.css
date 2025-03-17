@@ -1,0 +1,717 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;600&family=Poppins:wght@400;600&display=swap");
+
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mukta", "Poppins", sans-serif;
+}
+body {
+  background-image: url("https://www.drikpanchang.com/images/home/xcenterpattern.jpg.pagespeed.ic.dK3xVW_WmK.webp");
+  background-repeat: repeat;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: #e3a04e;
+  position: relative;
+}
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15px;
+  background-image: url("https://www.drikpanchang.com/images/decoration/border_pattern.svg");
+  background-size: 20px auto;
+  background-repeat: repeat-y;
+}
+.container::before {
+  left: 0;
+}
+
+.container::after {
+  right: 0;
+}
+hr {
+  color: pink;
+}
+/* Header */
+.header {
+  background-color: #7a2d18;
+  padding: 5px;
+  color: #fff;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Section */
+.logo img {
+  height: 60px;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #e6a24d;
+  border-radius: 5px;
+  padding: 8px 15px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  font-size: 14px;
+  color: #6b3f20;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.custom-button {
+  background-color: #8b3a1a;
+  color: #ffe3b2;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+.custom-button > img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.custom-button:hover {
+  background-color: #7a2d18;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4),
+    inset 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Hamburger Button */
+.hamburger-btn {
+  background: none;
+  border: none;
+  color: #ffe3b2;
+  cursor: pointer;
+  display: none;
+}
+
+.dpIcon {
+  border: 1px solid #a7510c;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  color: #ffe3b2;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.time {
+  font-size: 13px;
+  color: #f4d35e;
+  font-weight: bold;
+  border: 1px solid #a7510c;
+  padding: 4px 14px;
+  border-radius: 4px;
+}
+
+/* Navigation */
+.nav-bar {
+  background-color: #7a2d18;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+  box-shadow: 2px -10px 17px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item {
+  background-color: #f4a700;
+  color: #000;
+  border: none;
+  padding: 8px 14px;
+  margin: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #e68a00;
+}
+.none {
+  display: block;
+}
+.show {
+  display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .none {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+  .mob_icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .mob_img, .mob_icons>div {
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  .mob_img > img {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  .header-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .hamburger-btn {
+    display: block;
+  }
+
+  .nav-bar {
+    display: none;
+    flex-direction: column;
+    background-color: #c87028;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-bar.open {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 12px;
+    margin: 4px 0;
+    width: 100%;
+    text-align: left;
+  }
+}
+/* Header End */
+
+/* Hero Section */
+.hero-section {
+  background-color: #e3a04e;
+  padding: 16px;
+  text-align: center;
+}
+
+.zodiac-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  background-color: #e3a24b;
+  padding: 10px;
+}
+
+.zodiac-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+}
+
+.zodiac-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.zodiac-item p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #622d10;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.zodiac-item span {
+  font-size: 12px;
+  color: #884619;
+}
+
+@media (min-width: 768px) {
+  .zodiac-section {
+    gap: 24px;
+  }
+
+  .zodiac-item {
+    width: 80px;
+  }
+
+  .zodiac-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .zodiac-item p {
+    font-size: 16px;
+  }
+
+  .zodiac-item span {
+    font-size: 14px;
+  }
+}
+
+/* Video Section */
+.video-section iframe {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.breadcrumb-section {
+  background-color: #e6a04e;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.diya-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.main-heading {
+  font-size: 18px;
+  color: #6b1c0b;
+  margin-top: 5px;
+}
+
+.highlight {
+  background-color: #a31b0b;
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+  .diya-icon {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+
+  .main-heading {
+    font-size: 1.3rem;
+  }
+}
+
+/* Main section */
+.main-section {
+  background-color: #e3a04e;
+  text-align: left;
+}
+.calenderWrapper {
+  display: flex;
+}
+.calenderaside {
+  flex: 1;
+  border-right: 2px solid #a7510c;
+}
+.calenderbox {
+  flex: 3;
+}
+
+.calenderheader {
+  color: #edd8b2;
+  box-shadow: none;
+  background: #b33016;
+  padding: 0 1.5rem;
+}
+.calenderheader > h2 {
+  background: #b33016;
+  font-size: 16px;
+  padding: 1.2rem 0;
+}
+.calenderheader__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #b33016;
+}
+.calenderheader__date-engname,
+.calenderheader__date-hindiname {
+  background: #b33016;
+}
+.calenderheader__date-engname {
+  font-size: 1rem;
+}
+.calenderheader__date-hindiname {
+  font-size: 0.75rem;
+}
+.panchang-details {
+  padding: 2px 8px;
+}
+.panchang-details__label {
+  color: #581e00;
+}
+.panchang-details__value {
+  color: #b80000;
+}
+@media (max-width: 1030px) {
+  .calenderWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .panchang-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .panchang-details__box {
+    padding: 1.5rem;
+    background: #fcbd5c;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+
+    width: 18rem;
+    padding-right: 2px;
+
+    margin: 2px;
+    text-align: left;
+    line-height: 1.5;
+    border-radius: 3px;
+    vertical-align: top;
+    display: inline-block;
+  }
+  .panchang-details__value {
+    display: block;
+  }
+  .panchang-details__box > p {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.calender-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-bottom: 1px solid #a7510c;
+}
+.grid-daywise-cell {
+  padding: 0.4rem;
+  height: 10rem;
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #edd8b2;
+  background: #b33016;
+  border-top: 1px solid #a60000;
+}
+/* Mobile-first styles */
+.grid-cell {
+  border-top: 1px solid #b33016;
+  border-left: 1px solid #b33016;
+  padding: 0.5rem;
+  height: 8rem; /* Adjusted for mobile */
+  width: 100%; /* Full width on mobile */
+  position: relative;
+  background-image: url("https://www.drikpanchang.com/images/grid/background/xbackground_kalash.png.pagespeed.ic.JmF9vPIEdp.webp");
+  color: #781e00;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
+.tithi {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-weight: bolder;
+  font-size: 0.9rem; /* Smaller font for mobile */
+}
+
+.eng-date {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem; /* Smaller font for mobile */
+  font-weight: bold;
+}
+
+.small-date {
+  position: absolute;
+  top: 30%;
+  right: 5px;
+  font-size: 0.9rem; /* Smaller font for mobile */
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(229, 130, 47, 0.3);
+  width: 1.2rem; /* Smaller size for mobile */
+  height: 1.2rem; /* Smaller size for mobile */
+  text-align: center;
+  line-height: 1.2rem; /* Center text vertically */
+}
+
+.date-section {
+  position: absolute;
+  width: 100%;
+  top: 42%;
+  left: 0%;
+  padding: 5px; /* Reduced padding for mobile */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moon-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sunset-timing,
+.sunrise-timing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px; /* Slightly larger gap for better spacing */
+}
+
+.sunrise-timing > img,
+.sunset-timing > img {
+  width: 0.8rem; /* Smaller icons for mobile */
+  height: 0.8rem; /* Smaller icons for mobile */
+}
+
+.sunset-timing > span,
+.sunrise-timing > span {
+  font-size: 0.65rem; /* Smaller font for mobile */
+}
+
+.nakshatra_time {
+  position: absolute;
+  bottom: 5px;
+  font-size: 0.8rem; /* Smaller font for mobile */
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Add gap between icon and text */
+}
+
+.moon-timing {
+  position: absolute;
+  bottom: 25px;
+  font-size: 0.8rem; /* Smaller font for mobile */
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Add gap between icon and text */
+}
+
+/* Desktop styles (using media queries) */
+@media (min-width: 768px) {
+  .grid-cell {
+    height: 10rem; /* Restore original height for desktop */
+    width: 10rem; /* Restore original width for desktop */
+    padding: 0.75rem; /* Restore original padding for desktop */
+  }
+
+  .tithi {
+    font-size: 1rem; /* Restore original font size for desktop */
+  }
+
+  .eng-date {
+    font-size: 2.8rem; /* Restore original font size for desktop */
+  }
+
+  .small-date {
+    font-size: 1.1rem; /* Restore original font size for desktop */
+    width: 1.5rem; /* Restore original size for desktop */
+    height: 1.5rem; /* Restore original size for desktop */
+    line-height: 1.5rem; /* Center text vertically */
+  }
+
+  .date-section {
+    padding: 10px; /* Restore original padding for desktop */
+  }
+
+  .sunrise-timing > img,
+  .sunset-timing > img {
+    width: 1rem; /* Restore original icon size for desktop */
+    height: 1rem; /* Restore original icon size for desktop */
+  }
+
+  .sunset-timing > span,
+  .sunrise-timing > span {
+    font-size: 0.75rem; /* Restore original font size for desktop */
+  }
+
+  .nakshatra_time {
+    font-size: 1rem; /* Restore original font size for desktop */
+  }
+
+  .moon-timing {
+    font-size: 1rem; /* Restore original font size for desktop */
+  }
+}
+/* Hindu Calendar Section */
+.nakshatra {
+  padding: 20px;
+}
+h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center; /* Center-align the main heading */
+  color: #a60000;
+  border-bottom: 1px solid rgba(88, 30, 0, 0.1);
+}
+.hindu-calendar h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center; /* Center-align the main heading */
+  color: #a60000;
+}
+
+.hindu-calendar p {
+  margin-bottom: 15px;
+  color: #581e00;
+}
+
+.hindu-calendar ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.hindu-calendar ol li {
+  margin-bottom: 10px;
+  color: #581e00;
+}
+
+/* Panchang Section */
+.panchang h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center; /* Center-align the Panchang heading */
+  color: #a60000;
+}
+
+.panchang p {
+  margin-bottom: 20px;
+  color: #581e00;
+}
+
+/* Lunar Month List Section */
+.lunar-month h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center; /* Center-align the Lunar Month heading */
+}
+
+.lunar-month table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border: none; /* Remove table border */
+  color: #581e00;
+}
+
+.lunar-month td {
+  padding: 3px;
+  text-align: left; /* Align table content to the left */
+  border: none; /* Remove cell borders */
+}
+/* Footer */
+.footer {
+  background-color: #913718;
+  color: #efc177;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  color: #efc177;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #efc177;
+}
+
+.footer-section h3 img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.footer-section ul li::before {
+  content: "•";
+
+  position: absolute;
+  left: 0;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
